@@ -28,16 +28,15 @@ public class CubeController : MonoBehaviour {
 		
 	}
 
-	void OnCollisionEnter(Collision collision){
-		    Debug.Log ("ouch11");
+	void OnCollisionEnter2D(Collision2D col){
 
-		if(collision.gameObject.tag == "CubeTag" || collision.gameObject.tag == "GroundTag"){
-			GetComponent<AudioSource> ().volume = 1;
-			Debug.Log ("ouch");
+
+
+		if(col.gameObject.tag == "CubeTag" || col.gameObject.tag == "GroundTag"){
+
+			GetComponent<AudioSource> ().Play();
+
 		}
-			else {		
-			GetComponent<AudioSource> ().volume = 0;
-			}
 
 
 	}
